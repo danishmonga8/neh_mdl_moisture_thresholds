@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it and the associated manuscript."
+type: software
+title: "Moisture-aware rainfall thresholds for moisture-driven landslides in the Northeastern Himalaya"
+authors:
+  - family-names: Monga
+    given-names: Danish
+repository-code: "https://github.com/danishmonga8/neh_mdl_moisture_thresholds"
+url: "https://github.com/danishmonga8/neh_mdl_moisture_thresholds"
+license: MIT
+keywords:
+  - landslides
+  - rainfall thresholds
+  - antecedent precipitation
+  - root-zone soil moisture
+  - early warning systems
+

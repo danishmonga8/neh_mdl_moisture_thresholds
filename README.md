@@ -1,5 +1,7 @@
 # Moisture-aware rainfall thresholds for moisture-driven landslides in the Northeastern Himalaya
 
+[![Sample pipeline](https://github.com/danishmonga8/neh_mdl_moisture_thresholds/actions/workflows/sample-pipeline.yml/badge.svg)](https://github.com/danishmonga8/neh_mdl_moisture_thresholds/actions/workflows/sample-pipeline.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 ![MATLAB](https://img.shields.io/badge/MATLAB-code-orange) ![Python](https://img.shields.io/badge/Python-3.9%2B-blue) ![Region](https://img.shields.io/badge/region-NE%20Himalaya-green) ![Period](https://img.shields.io/badge/period-2007--2021-lightgrey)
 
 This repository contains the code used to analyse moisture-driven landslides (MDLs) at 21 rain-gauge stations in the Northeastern Himalaya (NEH), 2007-2021. It combines triggering rainfall (TR), antecedent precipitation (API) and root-zone effective saturation (S_eff) to
@@ -104,7 +106,15 @@ The script computes the triggering rainfall, API at N*, ADF, Kendall tau between
 
 ## Citation
 
-If you use this code, please cite the associated manuscript.
+If you use this code, please cite the associated manuscript and use the
+repository's [`CITATION.cff`](CITATION.cff) metadata. GitHub's **Cite this
+repository** control provides ready-to-copy citation formats.
+
+## License
+
+Original project code is released under the [MIT License](LICENSE). Bundled
+third-party components retain their own licenses; see
+[`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md).
 
 ## Contact
 
