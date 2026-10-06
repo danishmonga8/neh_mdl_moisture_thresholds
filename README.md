@@ -49,7 +49,7 @@ requirements.txt                Python dependencies
 | Quantity | Definition |
 |---|---|
 | Study design | 21 stations, 2007-2021 landslides; rainfall and S_eff to 2019 |
-| Landslide assignment | A catalogue landslide is assigned to every station within the analysis radius of 22.5 km. Landslides inside the radius of several stations are counted at each, so station counts are not independent. |
+| Landslide assignment | A catalogue landslide is assigned to every station within the analysis radius of 20 km. Landslides inside the radius of several stations are counted at each, so station counts are not independent. |
 | API | API(N, K) = sum over i = 1..N of K^i P(t-i), with K = 0.90 and candidate windows N = 3, 5, 7, 11, 15, 21, 25, 30 days |
 | Optimal window N* | Window with the highest Kendall tau-b between API(N) and lag-1 S_eff |
 | ADF | Share of landslide events in which rank(API)/(n+1) exceeds rank(TR)/(n+1); tied values get average ranks (tolerance 1e-12) |
