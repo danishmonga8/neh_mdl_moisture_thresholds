@@ -3,7 +3,7 @@
 % FUNCTION 9 -- RADIUS TAG FOR FOLDER/SHEET
 %
 % 10    -> 10km
-% 22.5  -> 22p5km
+% 12.5  -> 12p5km
 %% ========================================================================
 
 function tag = radiusTag(r)

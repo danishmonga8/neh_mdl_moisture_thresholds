@@ -17,6 +17,7 @@ clear; clc; close all;
 IN_DIR  = fullfile(neh_root(),'step_0_landslide_filtering','sensitivity_analysis_10_20_30');
 IN_XLSX = fullfile(IN_DIR, 'Sensitivity_10_20_30km_and_NearDuplicate_Audit.xlsx');
 OUT_DIR = IN_DIR;
+CURRENT_RADIUS_KM = 20;
 
 if ~exist(OUT_DIR,'dir'), mkdir(OUT_DIR); end
 
@@ -39,7 +40,7 @@ FONT = 'Arial';
 
 %% ===================== FIGURE 1: Pooled counts vs radius (grouped bar) =====================
 radiusLabels = compose('%g', Pooled.Radius_km);
-isCurrent = Pooled.Radius_km == 22.5;
+isCurrent = Pooled.Radius_km == CURRENT_RADIUS_KM;
 radiusLabels(isCurrent) = strcat(radiusLabels(isCurrent), " (current)");
 
 Y = [Pooled.Unique_physical_landslides, Pooled.Shared_between_stations, Pooled.Total_station_event_assignments];
@@ -109,7 +110,8 @@ for i = 1:height(Pooled)
         'HorizontalAlignment','center', 'FontSize',11, 'FontName',FONT);
 end
 
-xline(ax3, 22.5, '--', 'Current pipeline (22.5 km)', 'Color',[0.5 0.5 0.5], ...
+xline(ax3, CURRENT_RADIUS_KM, '--', ...
+    sprintf('Current pipeline (%g km)', CURRENT_RADIUS_KM), 'Color',[0.5 0.5 0.5], ...
     'LabelVerticalAlignment','bottom', 'FontSize',10, 'FontName',FONT);
 
 xlabel(ax3, 'Station buffer radius (km)', 'FontSize',16, 'FontWeight','bold', 'FontName',FONT);

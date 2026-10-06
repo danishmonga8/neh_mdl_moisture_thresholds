@@ -7,6 +7,7 @@ clear; clc; close all;
 IN_DIR  = fullfile(neh_root(),'step_0_landslide_filtering','sensitivity_analysis_10_20_30');
 IN_XLSX = fullfile(IN_DIR, 'Sensitivity_10_20_30km_and_NearDuplicate_Audit.xlsx');
 OUT_DIR = IN_DIR;
+CURRENT_RADIUS_KM = 20;
 
 if ~exist(OUT_DIR,'dir'), mkdir(OUT_DIR); end
 
@@ -31,7 +32,7 @@ FONT = 'Arial';
 radiusNum = double(Pooled.Radius_km);                       % force numeric explicitly
 radiusLabels = strings(numel(radiusNum),1);                 % pre-allocate as string array
 for i = 1:numel(radiusNum)
-    if radiusNum(i) == 22.5
+    if radiusNum(i) == CURRENT_RADIUS_KM
         radiusLabels(i) = sprintf('%g (current)', radiusNum(i));
     else
         radiusLabels(i) = sprintf('%g', radiusNum(i));
@@ -106,7 +107,8 @@ for i = 1:numel(radiusNum)
         'HorizontalAlignment','center', 'FontSize',11, 'FontName',FONT);
 end
 
-xline(ax3, 22.5, '--', 'Current pipeline (22.5 km)', 'Color',[0.5 0.5 0.5], ...
+xline(ax3, CURRENT_RADIUS_KM, '--', ...
+    sprintf('Current pipeline (%g km)', CURRENT_RADIUS_KM), 'Color',[0.5 0.5 0.5], ...
     'LabelVerticalAlignment','bottom', 'FontSize',10, 'FontName',FONT);
 
 xlabel(ax3, 'Station buffer radius (km)', 'FontSize',16, 'FontWeight','bold', 'FontName',FONT);
